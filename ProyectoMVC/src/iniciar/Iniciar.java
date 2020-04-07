@@ -5,10 +5,16 @@
  */
 package iniciar;
 
+import vista.Formulario;
+
 /**
  *
  * @author SuperUs
  */
 public class Iniciar {
+    public static void main(String[] args) {
+        Formulario formulario = new Formulario();
+        formulario.setVisible(true);
+    }
     
 }
