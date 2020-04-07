@@ -21,7 +21,7 @@ import modelo.MenuDia;
  *
  * @author SuperUs
  */
-public class Pedidos {
+public class Pedido {
     Vector vprincipal=new Vector();
  
  public void guardar(MenuDia unMenu){

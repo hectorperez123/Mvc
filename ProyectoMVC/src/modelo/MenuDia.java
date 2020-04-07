@@ -20,6 +20,10 @@ public class MenuDia {
         this.cantidad = cantidad;
     }
 
+    public MenuDia() {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getPlato() {
         return plato;
     }
