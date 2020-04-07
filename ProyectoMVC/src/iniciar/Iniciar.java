@@ -5,6 +5,8 @@
  */
 package iniciar;
 
+import controlador.Pedido;
+import modelo.MenuDia;
 import vista.Formulario;
 
 /**
@@ -14,7 +16,9 @@ import vista.Formulario;
 public class Iniciar {
     public static void main(String[] args) {
         Formulario formulario = new Formulario();
-        formulario.setVisible(true);
+        MenuDia menudia = new  MenuDia();
+        Pedido pedido = new Pedido(menudia,formulario);
+        pedido.ver();  
     }
     
 }
