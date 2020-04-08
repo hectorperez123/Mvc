@@ -18,7 +18,7 @@ public class Formulario extends javax.swing.JFrame {
     }
     @Override
     public Image getIconImage(){
-    Image retValue= Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("vista/escudo_udec.png"));
+    Image retValue= Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/escudo_udec.png"));
     return retValue;
 }
     /**
