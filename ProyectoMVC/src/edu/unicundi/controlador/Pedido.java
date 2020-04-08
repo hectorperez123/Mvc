@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlador;
+package edu.unicundi.controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,14 +18,14 @@ import java.util.StringTokenizer;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import modelo.MenuDia;
-import vista.Formulario;
+import edu.ucundi.modelo.MenuDia;
+import edu.ucundi.vista.Formulario;
 
 /**
  * 
  * Hector Fabian Perez Palmar
  */
-public class Pedido implements ActionListener, MouseListener {
+public class Pedido  implements ActionListener, MouseListener{
 /**
  * Declaracion de los aobjetos que se van a utilizar
  */
@@ -40,21 +40,21 @@ public class Pedido implements ActionListener, MouseListener {
         this.menudia = menudia;
         this.formulario = formulario;
         this.formulario.guardar.addActionListener(this);
-        this.formulario.mostrar.addMouseListener(this);       
+        this.formulario.mostrar.addMouseListener(this);
     }
 /**
  * metodo que permite visualizar el JFrame
- */
+ */    
     public void ver() {
         formulario.setVisible(true);
         formulario.setLocationRelativeTo(null);
     }
 /**
  * Metodo del MouseEvent que permite visualizar los contenidos de la tabla
- * @param me 
+ * @param e
  */
     @Override
-    public void mouseClicked(MouseEvent me) {
+    public void mouseClicked(MouseEvent e) {
         formulario.tablapedidos.setModel(listaMenudia());
         formulario.txt_plato.setText("");
         formulario.txt_adiciones.setText("");
@@ -67,10 +67,16 @@ public class Pedido implements ActionListener, MouseListener {
  */
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (formulario.txt_plato.getText().equals("") || formulario.txt_adiciones.getText().equals("") ) {
+            JOptionPane.showMessageDialog(null, "ERROR: Faltan datos", "Mensaje de Error", JOptionPane.WARNING_MESSAGE);
+            
+        }else{
         menudia.setPlato(formulario.txt_plato.getText());
         menudia.setAdiciones(formulario.txt_adiciones.getText());
         menudia.setCantidad(Integer.parseInt(formulario.cantidades.getSelectedItem().toString()));
         guardarArchivo(menudia);
+        }
+     
     }
 /**
  * Metodo donde se crea un archico y se almacena la informacion

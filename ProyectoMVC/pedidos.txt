@@ -1,18 +1,3 @@
-Costillas Cerdo|Salsa BBQ|2
-as|wqe|3
-as|wqe|3
-awswdd|qrq|1
-we|qweqe|7
-wer|wer|3
-wer|wer|3
-sdf|fsdf|2
-sdf|sdf|2
-dfgdfgdfg|dfgdfg|10
-asdassd|asdasd|1
-dasdasd|asdasd|4
-sdf|sdf|4
-||0
-||0
-hamburguesa|salsa rosada|2
-||0
+Costillas|Salsa BBQ|2
+Churrasco|Queso|3
 ||0

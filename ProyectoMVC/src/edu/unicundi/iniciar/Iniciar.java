@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iniciar;
+package edu.unicundi.iniciar;
 
-import controlador.Pedido;
-import modelo.MenuDia;
-import vista.Formulario;
+import edu.unicundi.controlador.Pedido;
+import edu.ucundi.modelo.MenuDia;
+import edu.ucundi.vista.Formulario;
 /**
  * 
  * @author Hector Fabian Perez Palmar

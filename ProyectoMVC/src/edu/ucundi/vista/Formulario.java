@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista;
+package edu.ucundi.vista;
 
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -135,7 +135,7 @@ public class Formulario extends javax.swing.JFrame {
         txt_plato.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(txt_plato, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 140, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/formulario.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/formulario.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 350));
 
         jButton1.setBackground(new java.awt.Color(51, 153, 255));
@@ -149,7 +149,7 @@ public class Formulario extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Fondo.jpg"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 430, 350));
 
         pack();
