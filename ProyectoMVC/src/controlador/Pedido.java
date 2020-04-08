@@ -40,7 +40,7 @@ public class Pedido implements ActionListener, MouseListener {
         this.menudia = menudia;
         this.formulario = formulario;
         this.formulario.guardar.addActionListener(this);
-        this.formulario.mostrar.addMouseListener(this);
+        this.formulario.mostrar.addMouseListener(this);       
     }
 /**
  * metodo que permite visualizar el JFrame
@@ -56,6 +56,9 @@ public class Pedido implements ActionListener, MouseListener {
     @Override
     public void mouseClicked(MouseEvent me) {
         formulario.tablapedidos.setModel(listaMenudia());
+        formulario.txt_plato.setText("");
+        formulario.txt_adiciones.setText("");
+        formulario.cantidades.setSelectedIndex(0);;
     }
 /**
  * Metodo del ActionEvent que permite traer los datos de las cajas de texto y guardarlos en el metodo 
@@ -119,7 +122,7 @@ public class Pedido implements ActionListener, MouseListener {
  */
     @Override
     public void mousePressed(MouseEvent e) {
-
+    
     }
 /**
  *  Metodo que se genera por implementar el MouseListener
