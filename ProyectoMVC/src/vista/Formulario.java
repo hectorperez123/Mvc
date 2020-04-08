@@ -5,6 +5,9 @@
  */
 package vista;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 /**
  *
  * @author SuperUs
@@ -13,7 +16,11 @@ public class Formulario extends javax.swing.JFrame {
     public Formulario() {
         initComponents();
     }
-
+    @Override
+    public Image getIconImage(){
+    Image retValue= Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("vista/escudo_udec.png"));
+    return retValue;
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,9 +41,11 @@ public class Formulario extends javax.swing.JFrame {
         tablapedidos = new javax.swing.JTable();
         txt_plato = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -65,7 +74,7 @@ public class Formulario extends javax.swing.JFrame {
                 guardarActionPerformed(evt);
             }
         });
-        getContentPane().add(guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
+        getContentPane().add(guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, -1, -1));
 
         mostrar.setBackground(new java.awt.Color(51, 153, 255));
         mostrar.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
@@ -77,7 +86,7 @@ public class Formulario extends javax.swing.JFrame {
                 mostrarActionPerformed(evt);
             }
         });
-        getContentPane().add(mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, -1, -1));
+        getContentPane().add(mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,6 +138,17 @@ public class Formulario extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/formulario.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 350));
 
+        jButton1.setBackground(new java.awt.Color(51, 153, 255));
+        jButton1.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, -1, -1));
+
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 430, 350));
 
@@ -143,6 +163,10 @@ public class Formulario extends javax.swing.JFrame {
       
     }//GEN-LAST:event_mostrarActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -151,6 +175,7 @@ public class Formulario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox<String> cantidades;
     public javax.swing.JButton guardar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
